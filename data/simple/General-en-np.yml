@@ -1,0 +1,5 @@
+# No-picture and no personal info version
+inherits:
+- data/simple/General-en.yml
+data:
+  np: true

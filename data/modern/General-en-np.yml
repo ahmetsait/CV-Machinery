@@ -1,0 +1,5 @@
+# No-picture version
+inherits:
+- data/modern/General-en.yml
+data:
+  np: true

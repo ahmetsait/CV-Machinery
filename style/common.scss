@@ -1,0 +1,104 @@
+@use "config";
+
+@layer common {
+	body {
+		font-family: config.$default-sans;
+		line-height: 1.5;
+		tab-size: 4;
+	}
+	
+	a {
+		color: #0366d6;
+		text-decoration: none;
+	}
+	
+	a:visited {
+		color: #0366d6;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
+	
+	img {
+		user-select: none;
+	}
+	
+	.block {
+		display: block !important;
+	}
+	
+	.inline {
+		display: inline !important;
+	}
+	
+	.noselect {
+		user-select: none !important;
+	}
+	
+	.noninteractive {
+		pointer-events: none !important;
+	}
+	
+	.hidden {
+		display: none !important;
+	}
+	
+	.left {
+		text-align: left !important;
+	}
+	
+	.center {
+		text-align: center !important;
+	}
+	
+	.right {
+		text-align: right !important;
+	}
+	
+	.mono {
+		font-family: config.$default-monospace !important;
+		font-size: 87.5%;
+	}
+	
+	.b {
+		font-weight: bold !important;
+	}
+	
+	.i {
+		font-style: italic !important;
+	}
+	
+	.nobreak {
+		break-inside: avoid !important;
+	}
+	
+	.margin {
+		margin: 1em 0 !important;
+	}
+	
+	.nomargin {
+		margin: 0 !important;
+	}
+	
+	.double-col {
+		columns: 2 !important;
+		column-gap: 1em;
+	}
+	
+	h1, h2, h3, h4, h5, h6, p {
+		margin-top: 0.5em;
+	}
+	
+	svg.fontawesome {
+		height: 1em;
+		vertical-align: -0.125em;
+		overflow: visible;
+	}
+	
+	@media print {
+		h1, h2, h3, h4, h5, h6 {
+			break-after: avoid;
+		}
+	}
+}

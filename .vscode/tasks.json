@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "mypy",
+			"type": "shell",
+			"command": "mypy",
+			"args": [
+				"--strict",
+				"${workspaceFolder}/*.py",
+			],
+			"problemMatcher": "$gcc",
+			"group": {
+				"kind": "build",
+				"isDefault": "**/*.py",
+			},
+			"presentation": {
+				"reveal": "silent",
+				"revealProblems": "onProblem",
+				"clear": true,
+			},
+		},
+		{
+			"label": "build",
+			"type": "process",
+			"command": "./build.py",
+			"args": [],
+			"windows": {
+				"command": "python",
+				"args": [
+					"build.py",
+				]
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true,
+			},
+			"presentation": {
+				"reveal": "silent",
+				"revealProblems": "onProblem",
+			},
+		},
+	]
+}

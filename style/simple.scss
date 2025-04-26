@@ -1,0 +1,122 @@
+@use "config";
+
+body {
+	padding-bottom: 2em;
+	font-size: 10pt;
+}
+
+$page-margin: 1.25cm;
+
+@media not print {
+	.container {
+		max-width: calc(210mm - #{$page-margin} * 2);
+		margin: 0 auto;
+	}
+}
+
+h1 {
+	color: #2F5496;
+	font-size: 300%;
+	font-variant: small-caps;
+	line-height: 1;
+}
+
+.job-title {
+	font-size: 2em;
+	margin: 0.5em 0 0.5em 0;
+	color: gray;
+	font-variant: small-caps;
+}
+
+.key-value-container {
+	margin-top: 0.625em;
+}
+
+.key-value {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	row-gap: .25em;
+	
+	.key {
+		text-align: end;
+	}
+	
+	.value {
+		padding-left: 0.5em;
+	}
+}
+
+h2 {
+	color: #2F5496;
+	font-size: 150%;
+	border-bottom: #6288ce solid 2px;
+}
+
+h3 {
+	color: #404040;
+	font-size: 125%;
+}
+
+.photo {
+	float: right;
+	width: 20%;
+	border-radius: 25% 0;
+}
+
+ul, ol {
+	list-style: disc;
+	padding-left: 1.25em;
+}
+
+li {
+	margin-top: 0.625em;
+	break-inside: avoid;
+}
+
+.skills {
+	ul, ol {
+		columns: 2;
+		margin-top: 0.625em;
+	}
+	li {
+		margin: 0;
+	}
+}
+
+.personal-info h3 {
+	color: #2F5496;
+	font-size: 125%;
+}
+
+.tech-list {
+	font-size: 75%;
+	
+	span {
+		display: inline-block;
+		background-color: #0366d630;
+		border-radius: 1em;
+		padding: 0 0.5em;
+		line-height: 1.75em;
+	}
+}
+
+@media print {
+	@page {
+		margin: $page-margin;
+		padding: 0;
+		size: A4;
+	}
+	
+	body {
+		padding: 0;
+	}
+	
+	.container {
+		padding: 0;
+		margin: 0;
+	}	
+	
+	h1 {
+		margin-top: 0;
+	}
+}

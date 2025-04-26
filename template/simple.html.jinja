@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="{{ lang }}">
+<head>
+	<meta charset="utf-8" />
+	<title>{{ title }}</title>
+	<meta content="text/html" http-equiv="Content-Type">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<base target="_blank">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:;">
+	<style>{% include "style/reset.css" %}</style>
+	<style>{% include "style/common.css" %}</style>
+	<style>{% include "style/simple.css" %}</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			{% if not np | default(false) %}
+				<img class="photo" src="data:image/jpeg;base64,{% include "base64/picture.jpg.b64" %}">
+			{% endif %}
+			<h1 lang="{{ name_lang }}">{{ name }}</h1>
+			<p class="job-title">{{ job_title }}</p>
+			<div class="key-value-container">
+				<div class="key-value">
+					{% for value in contact_info.values() %}
+						<div class="key">{{ value.title }}:</div>
+						{% if value.url is defined %}
+							<div class="value"><a href="{{ value.url }}">{{ value.text | default(value.url) }}</a></div>
+						{% else %}
+							<div class="value">{{ value.text }}</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<section id="career-goal">
+				<h2>{{ about.title }}</h2>
+				<p>{{ about.content }}</p>
+			</section>
+			{% if education is defined %}
+				<section id="education">
+					<h2>{{ education.title }}</h2>
+					<ul>
+						{% for edu in education.list %}
+							<li>
+								<h3>{{ edu.title }}</h3>
+								{% if edu.description is string %}
+									<p>{{ edu.description }}</p>
+								{% elif edu.description is iterable %}
+									<ul class="nomargin">
+										{% for desc in edu.description %}
+											<li class="nomargin">{{ desc }}</li>
+										{% endfor %}
+									</ul>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+			{% if experience is defined %}
+				<section id="experience">
+					<h2>{{ experience.title }}</h2>
+					<ul>
+						{% for exp in experience.list %}
+							<li>
+								<h3>{{ exp.title }} ({{ exp.date }})</h3>
+								<span class="tech-list">{% for tech in exp.techs %}<span>{{ tech }}</span> {% endfor %}</span><br>
+								{% if exp.description is string %}
+									<div class="experience-description">{{ exp.description }}</div>
+								{% elif exp.description is iterable %}
+									<ul class="nomargin">
+										{% for desc in exp.description %}
+											<li class="nomargin">{{ desc }}</li>
+										{% endfor %}
+									</ul>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+			{% if events is defined %}
+				<section id="events">
+					<h2>{{ events.title }}</h2>
+					<ul>
+						{% for event in events.list %}
+						<li>
+							{{ event }}<br>
+							{% for url in event.urls | default([]) %}
+								<a href="{{ url }}">{{ url }}</a><br>
+							{% endfor %}
+						</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+			{% if projects is defined %}
+				<section id="projects">
+					<h2>{{ projects.title }}</h2>
+					<ul>
+						{% for project in projects.list.values() %}
+							<li>
+								<span class="b">
+									{% if project.title is string %}
+										{{ project.title }}
+									{% elif project.title is iterable %}
+										{% for project_title in project.title %}
+											<a href="{{ project_title.url }}">{{ project_title.name }}</a>
+											{% if not loop.last %} & {% endif %}
+										{% endfor %}
+									{% endif %}
+								</span>
+								<span class="tech-list">{% for tech in project.techs %}<span>{{ tech }}</span> {% endfor %}</span><br>
+								{{ project.description -}}
+							</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+			{% if languages is defined %}
+				<section id="language-skills">
+					<h2>{{ language_skills.title }}</h2>
+					<ul>
+						{% for language_skill in language_skills.list %}
+							<li>
+								<p><span class="b">{{ language_skill.name }}</span>: {{ language_skill.description }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+			{% if skills is defined %}
+				<section class="skills">
+					<h2>{{ skills.title }}</h2>
+					<ul class="margin double-col">
+						{% for computer_skill in skills.list %}
+							<li>{{ computer_skill }}</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+			{% if personal_info is defined %}
+				<section class="personal-info">
+					<h2>{{ personal_info.title }}</h2>
+					{% if personal_info is defined and not np | default(false) %}
+						<div class="key-value-container margin double-col">
+							<div class="key-value">
+								{% for key, value in personal_info.list.items() %}
+									<div class="key">{{ key }}:</div>
+									<div class="value">{{ value }}</div>
+									{% if loop.index == (loop.length + 1) // 2 %}
+										</div>
+										<div class="key-value">
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					{% endif %}
+					<div class="double-col margin">
+						{% if highlights is defined %}
+							<div class="nobreak">
+								<h3 class="nomargin">{{ highlights.title }}</h3>
+								<p>
+									{% for highlight in highlights.list %}
+										{{ highlight }}<br>
+									{% endfor %}
+								</p>
+							</div>
+						{% endif %}
+						{% if hobbies is defined %}
+							<div class="nobreak">
+								<h3>{{ hobbies.title }}</h3>
+								<p>
+									{% for hobby in hobbies.list %}
+										{{ hobby }}<br>
+									{% endfor %}
+								</p>
+							</div>
+						{% endif %}
+						{% if memberships is defined %}
+							<div class="nobreak">
+								<h3>{{ memberships.title }}</h3>
+								<p>
+									{% for membership in memberships.list %}
+										{{ membership }}<br>
+									{% endfor %}
+								</p>
+							</div>
+						{% endif %}
+						{% if interests is defined %}
+							<div class="nobreak">
+								<h3>{{ interests.title }}</h3>
+								<p>
+									{% for interest in interests.list %}
+										{{ interest }}<br>
+									{% endfor %}
+								</p>
+							</div>
+						{% endif %}
+					</div>
+				</section>
+			{% endif %}
+			{% if references is defined %}
+				<section id="references">
+					<h2>{{ references.title }}</h2>
+					<ul>
+						{% for reference in references.list %}
+							<li>
+								<p>{{ reference.name }}</p>
+								{% if reference.email is defined %}
+									<a href="mailto:{{ reference.email }}">{{ reference.email }}</a><br>
+								{% endif %}
+								{% if reference.tel is defined %}
+									<a href="{{ reference.tel.url }}">{{ reference.tel.text }}</a><br>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+		</div>
+	</main>
+</body>
+</html>

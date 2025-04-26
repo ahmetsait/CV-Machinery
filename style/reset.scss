@@ -1,0 +1,107 @@
+@layer reset {
+	a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote, body, canvas, caption, cite, code, data, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, nav, object, ol, output, p, picture, pre, q, ruby, s, samp, search, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, track, u, ul, var, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		vertical-align: baseline;
+		box-sizing: border-box;
+	}
+	
+	// Remove outline offset of focusable elements in Chrome.
+	a,
+	area,
+	button,
+	input,
+	select,
+	textarea {
+		outline-offset: 0;
+	}
+	
+	// Dropdown color is inherited from <select> in Chrome.
+	option {
+		background-color: #f2f3f4;
+	}
+	
+	// Set line height as 1 to avoid layout nonsense.
+	body {
+		line-height: 1;
+	}
+
+	// Remove list item markers.
+	ol, ul, li {
+		list-style: none;
+	}
+
+	// Allow list style to be set on <ol> <ul> and make it work on <li>.
+	ol li,
+	ul li {
+		list-style: inherit;
+	}
+
+	// Remove default quotes.
+	q {
+		quotes: none;
+	}
+
+	// Remove spacing between table cells.
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	// Improve readability when mouse hovered in all browsers.
+	a:hover {
+		outline: 0;
+	}
+
+	// Consistent border color across browsers.
+	hr {
+		border-color: #808080;
+	}
+
+	button, input, select, textarea {
+		margin: 0;
+		padding: 0;
+		color: inherit;
+		font: inherit;
+		// line-height seems to have no effect on <select>
+		// and no effect on <input type="button"> in Chrome.
+		line-height: inherit;
+		vertical-align: baseline;
+	}
+
+	// Remove search cancel button in Safari and Chrome.
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-decoration,
+	input[type="search"]::-webkit-search-results-button,
+	input[type="search"]::-webkit-search-results-decoration {
+		appearance: none;
+	}
+
+	button:not(:disabled),
+	input[type="button"]:not(:disabled),
+	input[type="reset"]:not(:disabled),
+	input[type="submit"]:not(:disabled) {
+		// Consistency of cursor style between <input type="image"> and others.
+		cursor: pointer;
+	}
+
+	button,
+	input[type="button"],
+	input[type="image"],
+	input[type="reset"],
+	input[type="submit"],
+	input[type="file"]::file-selector-button,
+	input[type="color"] {
+		// Correct the inability to style clickable types in iOS and Safari.
+		appearance: button;
+		// Change font properties to `inherit` in Safari.
+		font: inherit;
+	}
+
+	::selection {
+		background: #006ff54c;
+		text-shadow: none;
+	}
+}

@@ -1,0 +1,155 @@
+inherits:
+data:
+  lang: en
+  name: Sherlock Holmes
+  name_lang: en-GB
+  title: Sherlock Holmes • CV - EN
+  job_title: Private Detective
+  
+  contact_info:
+    Address:
+      icon: svg/fontawesome/solid/location-dot.svg
+      text: 221B Baker Street, London, United Kingdom
+    Time Zone:
+      icon: svg/fontawesome/solid/clock.svg
+      text: GMT+1
+    Phone:
+      icon: svg/fontawesome/solid/phone.svg
+      url: tel:+442072243688
+      text: "+44 20 7224 3688"
+    E-Mail:
+      icon: svg/fontawesome/solid/envelope.svg
+      url: mailto:sherlock.holmes@mail.com
+      text: sherlock.holmes@mail.com
+    Website:
+      icon: svg/fontawesome/solid/globe.svg
+      url: https://sherlockholmes.com
+      text: sherlockholmes.com
+    GitHub:
+      icon: svg/fontawesome/brands/github.svg
+      url: https://github.com/XXSherlockHolmesXX
+      text: XXSherlockHolmesXX
+    LinkedIn:
+      icon: svg/fontawesome/brands/linkedin.svg
+      url: https://www.linkedin.com/in/sherlockholmes
+      text: sherlockholmes
+  
+  skills:
+    title: Skills
+    list:
+    - name: Observation
+      level: Expert
+    - name: Logical Reasoning
+      level: Expert
+    - name: Forensic Science
+      level: Advanced
+    - name: Disguise
+      level: Expert
+    - name: Martial Arts
+      level: Advanced
+    - name: Violin
+      level: Intermediate
+  
+  languages:
+    title: Languages
+    list:
+      English: Native language.
+      French: Proficient
+      German: Intermediate
+  
+  references:
+    title: References
+    list:
+    - name: Dr. John Watson
+      email: john.watson@mail.com
+      tel:
+        text: "+44 20 7224 3688"
+        url: tel:+442072243688
+  
+  highlights:
+    title: Highlights
+    icon: svg/fontawesome/solid/star.svg
+    list:
+    - Highly skilled and experienced detective with a proven track record of solving complex cases using scientific methods and logical reasoning. Known for assisting Scotland Yard and providing expert advice on crime scene analysis.
+  
+  education:
+    title: Education
+    icon: svg/fontawesome/solid/graduation-cap.svg
+    list:
+    - date: 1877
+      school: University of Cambridge
+      degree: Bachelor of Chemistry
+      description:
+      - Specialized in Chemistry
+      - Conducted independent research on forensic science
+    
+    - date: 1874
+      school: Eton College
+      degree: A-Levels
+      description:
+      - Majored in Chemistry and Mathematics
+      - Participated in various science competitions
+  
+  experience:
+    title: Experience
+    icon: svg/fontawesome/solid/briefcase.svg
+    list:
+    
+    - date: Jan 1881 - Present
+      company:
+        name: Self-Employed
+      job_title: Private Detective
+      techs: [ "Forensic", "Disguise", "Martial Arts" ]
+      description:
+      - Solving complex and high-profile cases
+      - Utilizing scientific methods to analyze evidence
+      - Assisting Scotland Yard in various investigations
+      - Documenting and presenting findings to clients
+    
+    - date: Jan 1878 - Jan 1881
+      company:
+        name: Scotland Yard
+      job_title: Consulting Detective
+      techs: [ "Observation", "Logical Reasoning", "Violin" ]
+      description:
+      - Assisted in solving complex cases
+      - Provided expert advice on crime scene analysis
+      - Conducted independent investigations
+      - Trained junior detectives
+  
+  events:
+    title: Events
+    icon: svg/fontawesome/solid/newspaper.svg
+    list:
+    
+    - date: 1887
+      description: Gave a speech as the best man for Mr and Mrs Watson's wedding.
+    
+    - date: 1887
+      description: Solved the famous "Poison Giant" case.
+  
+  certificates:
+    title: Certificates
+    icon: svg/fontawesome/solid/award.svg
+    list:
+    
+    - date: 25.09.1891
+      title: Detective Trainer
+      issuer: Scotland Yard
+  
+  projects:
+    title: Projects
+    icon: svg/fontawesome/solid/gear.svg
+    list:
+      
+      fingerprint:
+        title: Fingerprint Revealing Powder
+        description: Development of a special compound material in coordination with Dr. John Watson that can be used to reveal fingerprints on a crime scene with minimal effort, making the use of monocle unnecessary.
+        techs: [ "Material Science", "Forensic Science", "Violin" ]
+      
+      invisibility:
+        title:
+        - name: Invisibility Serum
+          url: https://www.google.com/search?q=invisibility+serum
+        description: Development of a chemical liquid that makes the living tissue of those who consume it transparent to visible light.
+        techs: [ "Chemistry", "Alchemy", "Violin" ]

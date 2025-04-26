@@ -1,0 +1,163 @@
+inherits:
+data:
+  lang: en
+  name: Sherlock Holmes
+  name_lang: en-GB
+  title: Sherlock Holmes • CV - EN
+  job_title: Private Detective
+  
+  contact_info:
+    Address:
+      title: Address
+      text: 221B Baker Street, London, United Kingdom
+    Time Zone:
+      title: Time Zone
+      text: GMT+1
+    Phone:
+      title: Phone
+      text: "+44 20 7224 3688"
+      url: tel:+442072243688
+    E-Mail:
+      title: E-Mail
+      text: sherlock.holmes@mail.com
+      url: mailto:sherlock.holmes@mail.com
+    Website:
+      title: Website
+      url: https://sherlockholmes.com
+    GitHub:
+      title: GitHub
+      url: https://github.com/XXSherlockHolmesXX
+    LinkedIn:
+      title: LinkedIn
+      url: https://www.linkedin.com/in/sherlockholmes
+  
+  about:
+    title: About
+    content: Highly skilled and experienced detective with a proven track record of solving complex cases using scientific methods and logical reasoning. Known for assisting Scotland Yard and providing expert advice on crime scene analysis.
+  
+  education:
+    title: Education
+    list:
+    - title: University of Cambridge | Bachelor of Chemistry (1877)
+      description:
+      - Specialized in Chemistry
+      - Conducted independent research on forensic science
+    
+    - title: Eton College | A-Levels (1874)
+      description:
+      - Majored in Chemistry and Mathematics
+      - Participated in various science competitions
+  
+  experience:
+    title: Experience
+    list:
+    
+    - title: Self-Employed
+      job_title: Private Detective
+      techs: [ "Forensic", "Disguise", "Martial Arts" ]
+      date: Jan 1881 - Present
+      description:
+      - Solving complex and high-profile cases
+      - Utilizing scientific methods to analyze evidence
+      - Assisting Scotland Yard in various investigations
+      - Documenting and presenting findings to clients
+    
+    - title: Scotland Yard
+      job_title: Consulting Detective
+      techs: [ "Observation", "Logical Reasoning", "Violin" ]
+      date: Jan 1878 - Jan 1881
+      description:
+      - Assisted in solving complex cases
+      - Provided expert advice on crime scene analysis
+      - Conducted independent investigations
+      - Trained junior detectives
+  
+  events:
+    title: Events
+    list:
+    - Gave a speech as the best man for Mr and Mrs Watson's wedding. (1887)
+    - Solved the famous "Poison Giant" case. (1887)
+  
+  projects:
+    title: Projects
+    icon: svg/fontawesome/solid/gear.svg
+    list:
+      
+      fingerprint:
+        title: Fingerprint Revealing Powder
+        description: Development of a special compound material in coordination with Dr. John Watson that can be used to reveal fingerprints on a crime scene with minimal effort, making the use of monocle unnecessary.
+        techs: [ "Material Science", "Forensic Science", "Violin" ]
+      
+      invisibility:
+        title:
+        - name: Invisibility Serum
+          url: https://www.google.com/search?q=invisibility+serum
+        description: Development of a chemical liquid that makes the living tissue of those who consume it transparent to visible light.
+        techs: [ "Chemistry", "Alchemy", "Violin" ]
+  
+  language_skills:
+    title: Language Skills
+    list:
+    - name: English
+      description: Native language.
+    - name: French
+      description: Proficient
+    - name: German
+      description: Intermediate
+  
+  skills:
+    title: Skills
+    list:
+    - Observation (Expert)
+    - Logical Reasoning (Expert)
+    - Forensic Science (Advanced)
+    - Disguise (Expert)
+    - Martial Arts (Advanced)
+    - Violin (Intermediate)
+  
+  personal_info:
+    title: Personal Info
+    list:
+      Sex: Male
+      Birthdate: 06.01.1854
+      Nationality: British
+      Marital Status: Single
+      Driving License: None
+      Smoke: "Yes"
+  
+  highlights:
+    title: Highlights
+    list:
+    - Highly perceptive, analytical thinker.
+    - Has strong desire for solving complex cases.
+  
+  hobbies:
+    title: Hobbies
+    list:
+    - Playing Violin
+    - Chemistry Experiments
+    - Boxing
+    - Fencing
+    - Beekeeping
+  
+  memberships:
+    title: Memberships
+    list:
+    - Diogenes Club
+    - Scotland Yard Marching Band
+  
+  interests:
+    title: Interests
+    list:
+    - Forensic Science
+    - Martial Arts
+    - Chemistry
+  
+  references:
+    title: References
+    list:
+    - name: Dr. John Watson
+      email: john.watson@mail.com
+      tel:
+        text: "+44 20 7224 3688"
+        url: tel:+442072243688
