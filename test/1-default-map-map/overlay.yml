@@ -1,0 +1,8 @@
+inherits:
+- base.yml
+data:
+  m: m
+  n: n
+  c:
+    z: z
+  d: D

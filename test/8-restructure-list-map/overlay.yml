@@ -1,0 +1,8 @@
+inherits:
+- base.yml
+data:
+  ~key:
+    2:
+      x: x
+    0:
+      y: y

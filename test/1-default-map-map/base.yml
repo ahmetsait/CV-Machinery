@@ -1,0 +1,9 @@
+data:
+  a: a
+  b: b
+  c:
+    x: x
+    y: y
+  d:
+    1: one
+    2: two

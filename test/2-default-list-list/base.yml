@@ -1,0 +1,6 @@
+data:
+  list:
+  - a
+  - x: x
+    y: y
+  - k
