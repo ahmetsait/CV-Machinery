@@ -34,7 +34,7 @@ Or download it as a [tarball][tgz] file and extract somewhere suitable.
 ### Dependencies
 1.	Chromium to render the resulting HTML to PDF, so make sure [Google Chrome][chrome] is installed and `google-chrome` command is available in your `PATH`. You can also edit `build.py` to use something else like `chromium-browser` instead.
 2.	[Sass][sass] to compile SCSS styles to CSS. Make sure `sass` command is available in `PATH`. (Tested with Dart Sass 1.83.0)  
-	Sass is not essential and you can remove Sass related commands from `build.py` and `.gitignore` if you intend to use plain css.
+	Sass is not essential and you can remove Sass related commands from `build.py`, and remove `*.css` from `.gitignore` if you intend to use plain css.
 3.	Python libraries:
 	- [Jinja2](https://pypi.org/project/Jinja2) (tested with v3.1.6)
 	- [PyYAML](https://pypi.org/project/PyYAML) (tested with v6.0.2)
