@@ -1,7 +1,7 @@
 <div align="center">
 
 CV Machinery  
-![Platforms](https://img.shields.io/badge/platforms-linux-blue) [![Version](https://img.shields.io/github/v/tag/ahmetsait/CV-Machinery?label=version)](https://github.com/ahmetsait/CV-Machinery/tags) [![License](https://img.shields.io/github/license/ahmetsait/CV-Machinery)](COPYING.txt)
+![Platforms](https://img.shields.io/badge/platforms-linux-blue) [![Version](https://img.shields.io/github/v/tag/ahmetsait/CV-Machinery?label=version)](https://github.com/ahmetsait/CV-Machinery/tags) [![License](https://img.shields.io/github/license/ahmetsait/CV-Machinery)](COPYING.txt) [![Sponsor](https://img.shields.io/badge/Sponsor-black?logo=githubsponsors)](https://github.com/sponsors/ahmetsait)
 ===
 The CV Build System for Developers
 </div>
